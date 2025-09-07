@@ -1,8 +1,8 @@
-
 def test_index_page(client):
     resp = client.get('/')
     assert resp.status_code == 200
     assert b"Student Feedback Portal" in resp.data
+
 
 def test_submit_feedback_redirects_to_thanks(client):
     resp = client.post('/', data={
