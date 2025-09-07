@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Feedback Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Feedback Portal</h1>
+    <form method="POST" action="/">
+      <label for="course">Course Name</label>
+      <input type="text" id="course" name="course" placeholder="e.g., CS101" required/>
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <label for="comments">Comments (optional)</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Your thoughts..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <p class="muted">This app stores feedback in memory (for demo). Use <a href="/admin">/admin</a> to view.</p>
+  </div>
+</body>
+</html>

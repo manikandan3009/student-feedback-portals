@@ -1,0 +1,25 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+env/
+
+# pytest
+.pytest_cache/
+
+# coverage
+htmlcov/
+.coverage*
+*.cover
+
+# VSCode
+.vscode/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db

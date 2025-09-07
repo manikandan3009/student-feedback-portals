@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Feedback</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin: Collected Feedback</h1>
+    {% if feedbacks %}
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Course</th>
+            <th>Rating</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for fb in feedbacks %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ fb.course if fb.course else fb["course"] }}</td>
+            <td>{{ fb.rating if fb.rating else fb["rating"] }}</td>
+            <td>{{ fb.comments if fb.comments else fb["comments"] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No feedback yet.</p>
+    {% endif %}
+    <p><a href="/">Back to form</a></p>
+  </div>
+</body>
+</html>
