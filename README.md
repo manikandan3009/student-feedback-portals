@@ -7,13 +7,6 @@ CI/CD via GitHub Actions:
 
 ## Quick Start (Local)
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-flask --app app run --host 0.0.0.0 --port 8000
-```
-
 Open http://localhost:8000
 
 ## Run tests & lint locally
